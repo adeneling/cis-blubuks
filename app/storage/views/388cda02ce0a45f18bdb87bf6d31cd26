@@ -1,0 +1,79 @@
+
+
+<?php $__env->startSection('title'); ?>
+	<?php echo $title; ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('breadcrumb'); ?>
+	<li><?php echo $title; ?></li>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('nav'); ?>
+	<li class="mt"> 
+        <a href="<?php echo URL::to('/dashboard'); ?>">
+            <i class="fa fa-dashboard"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a class ="active" href="<?php echo URL::to('/members'); ?>">
+            <i class="fa fa-desktop"></i>
+            <span>Kelola Member</span>
+        </a>
+    </li>    
+
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-desktop"></i>
+            <span>Kelola Poin</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-desktop"></i>
+            <span>Kelola Diskon</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-desktop"></i>
+            <span>Kelola Promo</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-desktop"></i>
+            <span>Kelola Reward</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-desktop"></i>
+            <span>Kelola Keuangan</span>
+        </a>
+    </li>
+    
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-cogs"></i>
+            <span>History Penukaran</span>
+        </a>
+    </li>
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-th"></i>
+            <span>History Transaksi</span>
+        </a>
+    </li>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+	<h1>Kelola Member</h1>
+<?php $__env->stopSection(); ?>

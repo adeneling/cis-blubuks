@@ -1,0 +1,51 @@
+<?php $__env->startSection('title'); ?>
+	<?php echo $title; ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('breadcrumb'); ?>
+	<li><?php echo $title; ?></li>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('total_point'); ?>
+    <h5 class="centered"> Total Point : </h5>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('nav'); ?>
+	<li class="mt"> 
+        <a class ="active" href="<?php echo URL::to('/dashboard'); ?>">
+            <i class="fa fa-dashboard"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-tasks"></i>
+            <span>Tukar Poin</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a href="<?php echo URL::to('/promo'); ?>">
+            <i class="fa fa-tasks"></i>
+            <span>Promo dan Discount</span>
+        </a>
+    </li>
+
+	
+
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-cogs"></i>
+            <span>History Penukaran</span>
+        </a>
+    </li>
+    
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+    
+    	
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

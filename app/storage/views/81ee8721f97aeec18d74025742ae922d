@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Daftar | Customer Intimacy System</title>
+    
+
+    <!-- Bootstrap core CSS -->
+    <?php echo HTML::style('css/bootstrap.css'); ?>
+
+    
+    <!--external css-->
+    <?php echo HTML::style('font-awesome/css/font-awesome.css'); ?>
+
+    
+         
+    <!-- Custom styles for this template -->
+    <?php echo HTML::style('css/style.css'); ?>
+
+    
+    <?php echo HTML::style('css/style-responsive.css'); ?>
+
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+
+	  <div id="signup-page" >
+	  	<div class="container" >
+	  		
+				<?php echo Form::open(array('url' => route('guest.register'), 'class' => 'form-signup')); ?>
+
+	  					      	
+		        	<h2 class="form-signup-heading" ><a href="<?php echo URL::to('/'); ?>">BLUBUKS COMPANY</a> <br>DAFTAR SEKARANG</h2>
+
+				        <div class="signup-wrap">
+				        <!-- Alert Awal-->
+				        	<?php echo $__env->make('layouts.partials.validation', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				        	<hr>			        	
+				        <!-- Alert Akhir-->
+							<?php echo Form::label('first_name', 'Nama Depan'); ?>
+
+				        	<?php echo Form::text('first_name',null, array('class'=>'form-control','placeholder'=>'Nama Depan' , 'autofocus')); ?>
+
+				            <br>
+				            <?php echo Form::label('last_name', 'Nama Belakang'); ?>
+
+				        	<?php echo Form::text('last_name',null, array('class'=>'form-control','placeholder'=>'Nama Belakang')); ?>
+
+				        	<br>
+				        	<?php echo Form::label('email', 'Masukan E-Mail'); ?>
+
+				        	<?php echo Form::text('email',null, array('class'=>'form-control','placeholder'=>'Masukan E-Mail')); ?>
+
+				        	<br>
+				            <?php echo Form::label('password', 'Password'); ?>
+
+				            <?php echo Form::password('password',array('class'=>'form-control','placeholder'=>'************')); ?>
+
+				            <br>
+				            <?php echo Form::label('password_confirmation', 'Konfirmasi Password'); ?>
+
+				            <?php echo Form::password('password_confirmation',array('class'=>'form-control','placeholder'=>'************')); ?>
+
+				            <br>
+				            <?php echo Form::label('id_card_number', 'ID KTP'); ?>
+
+				            <?php echo Form::text('id_card_number',null,array('class'=>'form-control','placeholder'=>'Masukan ID KTP')); ?>
+
+				            <br>
+				            <?php echo Form::label('address', 'Alamat'); ?>
+
+				            <?php echo Form::text('address',null,array('class'=>'form-control','placeholder'=>'Alamat Lengkap')); ?>
+
+				            <br>
+
+				            <?php echo Form::button('DAFTAR', array('type' => 'submit', 'class' => 'btn btn-theme btn-block')); ?>
+
+				            <hr>
+				            <div class="registration">
+				                Sudah Punya Akun?<br>
+				                <a class="" href="<?php echo URL::to('/login'); ?>">
+				                    Masuk
+				                </a>
+				            </div>
+
+
+			        	</div>
+		      	<?php echo Form::close(); ?>
+
+
+
+	  		
+	  	</div>
+	  </div>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <?php echo HTML::script('js/jquery.js'); ?>
+
+    <?php echo HTML::script('js/bootstrap.min.js'); ?>
+
+    
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <?php echo HTML::script('js/jquery.backstretch.min.js'); ?>
+
+    
+    <script>
+        $.backstretch("img/signup-bg.jpg", {speed: 500});
+    </script>
+
+
+  </body>
+</html>

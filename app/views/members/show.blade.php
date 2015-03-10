@@ -1,0 +1,1 @@
+C:\xampp\htdocs\cisblubuks\app/views/members/show.blade.php

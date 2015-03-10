@@ -1,0 +1,41 @@
+<?php $__env->startSection('title'); ?>
+	<?php echo $title; ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('breadcrumb'); ?>
+	<li><?php echo $title; ?></li>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('nav'); ?>
+	<li class="mt"> 
+        <a class="active" href="javascript:;">
+            <i class="fa fa-dashboard"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-desktop"></i>
+            <span>List Member</span>
+        </a>
+    </li>
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-cogs"></i>
+            <span>History Penukaran</span>
+        </a>
+    </li>
+    <li class="sub-menu">
+        <a href="#">
+            <i class="fa fa-th"></i>
+            <span>History Transaksi</span>
+        </a>
+    </li>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+	WAK WAW
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

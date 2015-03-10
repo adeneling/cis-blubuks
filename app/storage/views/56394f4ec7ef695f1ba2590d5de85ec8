@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Login | Customer Intimacy System</title>
+    
+
+    <!-- Bootstrap core CSS -->
+    <?php echo HTML::style('css/bootstrap.css'); ?>
+
+    
+    <!--external css-->
+    <?php echo HTML::style('font-awesome/css/font-awesome.css'); ?>
+
+    
+         
+    <!-- Custom styles for this template -->
+    <?php echo HTML::style('css/style.css'); ?>
+
+    
+    <?php echo HTML::style('css/style-responsive.css'); ?>
+
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+
+	  <div id="login-page">
+	  	<div class="container">
+	  		
+
+	  			<?php echo Form::open(array('url'=>'/authenticate','class'=>'form-login')); ?>		      	
+		        	<h2 class="form-login-heading"><a href="<?php echo URL::to('/'); ?>">BLUBUKS COMPANY</a> <br>sign in now</h2>
+
+				        <div class="login-wrap">
+				        <!-- Alert Awal-->
+				        	<?php echo $__env->make('layouts.partials.alert', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>  		
+				        	<hr>
+				        <!-- Alert Akhir-->
+							<?php echo Form::label('email', 'E-Mail Address'); ?>
+
+				        	<?php echo Form::text('email',null, array('class'=>'form-control','placeholder'=>'Masukan Email anda')); ?>
+
+				            <br>
+				            <?php echo Form::label('password', 'Password'); ?>
+
+				            <?php echo Form::password('password',array('class'=>'form-control','placeholder'=>'Masukan Password')); ?>						
+							
+							<label class="checkbox">
+			                <span class="pull-right">
+			                    <a class="" href="#"> Lupa Password?</a>		
+			                </span>
+				            </label>
+				            
+				            <?php echo Form::button('<i class="fa fa-lock"></i> SIGN IN', array('type' => 'submit', 'class' => 'btn btn-theme btn-block')); ?>
+
+
+				            <!-- <?php echo Form::submit('SIGN IN', array('class'=>'btn btn-theme btn-block')); ?> -->
+				            <hr>
+				            <!-- Tombol Social Media				            
+				            <div class="login-social-link centered">
+				            <p>atau kamu juga dapat masuk lewat media sosial</p>
+				                <button class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</button>
+				                <button class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</button>
+				            </div>
+				            -->
+				            <div class="registration">
+				                Belum Punya Akun?<br/>
+				                <a class="" href="<?php echo URL::to('/signup'); ?>">
+				                    Buat akun baru sekarang
+				                </a>
+				            </div>
+			        </div>
+		      	<?php echo Form::close(); ?>
+
+	  		
+	  	</div>
+	  </div>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <?php echo HTML::script('js/jquery.js'); ?>
+
+    <?php echo HTML::script('js/bootstrap.min.js'); ?>
+
+    
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <?php echo HTML::script('js/jquery.backstretch.min.js'); ?>
+
+    
+    <script>
+        $.backstretch("img/login-bg.jpg", {speed: 500});
+    </script>
+
+
+  </body>
+</html>

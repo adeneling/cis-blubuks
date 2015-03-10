@@ -1,0 +1,21 @@
+<?php if(Session::has('successMessage')): ?>
+	<div class="alert alert-success" data-uk-alert>
+		<a href="" class="uk-alert-close uk-close" > </a>
+		<p> <?php echo Session::get('successMessage'); ?> </p>
+	</div>
+<?php elseif(Session::has('errorMessage')): ?>
+	<div class="alert alert-danger" data-uk-alert>
+		<a href="" class="uk-alert-close uk-close" > </a>
+		<p> <?php echo Session::get('errorMessage'); ?> </p>
+	</div>
+<?php elseif(Session::has('infoMessage')): ?>
+	<div class="alert alert-info" data-uk-alert>
+		<a href="" class="uk-alert-close uk-close" > </a>
+		<p> <?php echo Session::get('infoMessage'); ?> </p>
+	</div>
+<?php elseif(Session::has('warningMessage')): ?>
+	<div class="alert alert-warning" data-uk-alert>
+		<a href="" class="uk-alert-close uk-close" > </a>
+		<p> <?php echo Session::get('warningMessage'); ?> </p>
+	</div>
+<?php endif; ?>
